@@ -1,0 +1,70 @@
+{
+  "name": "@swapnil-tot/pdf-editor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "scripts": {
+    "build": "npm run copy:assets && npm run build:esm && npm run build:cjs ",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "copy:assets": "copyfiles -u 1 src/assets/**/* dist/esm"
+  },
+  "publishConfig": {
+    "@swapnil-tot:registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swapnil-tot/PDF-editor-tool"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "react",
+    "typescript"
+  ],
+  "author": "swapniltot",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-beautiful-dnd": "^13.1.8",
+    "copyfiles": "^2.4.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^3.3.6",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^5.16.7",
+    "@mui/material": "^5.16.7",
+    "autoprefixer": "^10.4.16",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "4.5.136",
+    "postcss": "^8.4.32",
+    "react-beautiful-dnd": "^13.1.1",
+    "react-cropper": "^2.3.3",
+    "react-pdf": "^9.1.0",
+    "react-scripts": "^5.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
